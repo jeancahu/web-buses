@@ -18,7 +18,9 @@
                 display: inline-block;
                 padding: .5em;
             }
-            div {
+            /* Cambio de div a .header para evitar problemas 
+            con el div del mapa en ruta.html */
+            .header {
                 margin: auto;
                 width: fit-content;
                 padding: 10px;
@@ -26,17 +28,18 @@
                 color: white;
                 font-weight: 700;
                 font-size: larger;
-            }
+            } */
             a {
                 text-decoration: none;
             }
         </style>
-		
         <title>{% block page_title %}{% endblock %}</title>
     </head>
     <body>
         <header>
-            <div>
+            <!-- Cambio a clase header para evitar problemas  -->
+            <!-- con el div del mapa en ruta.html -->
+            <div class="header">
                 TSG
             </div>
         </header>
@@ -58,5 +61,7 @@
                 <li><a href="/contacto/">Contacto</a></li>
             </ul>
         </footer>
+        <script src="{% static 'js/hora_actual.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/map_main.js' %}" type="text/javascript"></script>
     </body>
 </html>
