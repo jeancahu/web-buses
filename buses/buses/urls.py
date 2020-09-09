@@ -31,3 +31,6 @@ urlpatterns = [
 
 urlpatterns += static(settings.STATIC_URL,
                         document_root=settings.STATICFILES_DIRS)
+
+#Agregamos a urlpatterns la ruta para encontrar los elementos de MEDIA
+urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
