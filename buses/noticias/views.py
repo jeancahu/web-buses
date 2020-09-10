@@ -16,7 +16,7 @@ def noticia(request):
 
 def busqueda(request):
 
-    elemento_Deseado=request.GET['elemento_Busqueda']
+    elemento_Deseado = request.GET['elemento_Busqueda']
 
     if elemento_Deseado:
         noticias_Relacionadas=Noticia.objects.filter(titulo__icontains=elemento_Deseado)
