@@ -2,8 +2,57 @@
 
 {% block page_title %} Rutas {% endblock %}
 
+{% block banner %}
+<!-- ========================
+       page title
+       =========================== -->
+<section class="page-title page-title-layout2 text-center bg-overlay">
+  <div class="bg-img"><img src="https://lh3.googleusercontent.com/proxy/uTEphXatlvCpPPt-Mxz4tysbe9yKICefAz1lMK-5637aYAylD16P_fShauo_eKUnPL1Qz0oJ8Dc_T3l-L2pndsGVHySyfT_JFjGKbPhrBSFQV0_dYyQ_l3_r2F8AUqjy5MTiiOk6xTdw" alt="background"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+	<h1 class="pagetitle__heading">Rutas</h1>
+	<nav aria-label="breadcrumb">
+	  <ol class="breadcrumb justify-content-center">
+	    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+	    <li class="breadcrumb-item"><a href="#">Páginas</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">Rutas</li>
+	  </ol>
+	</nav>
+      </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section><!-- /.page-title -->
+{% endblock %}
+
 {% block content %}
 
+<style>
+  <!-- * { -->
+  <!-- font-family: 'Barlow', sans-serif; -->
+  <!-- text-align: center; -->
+  <!-- box-sizing: border-box; -->
+  <!-- } -->
+  li {
+  display: inline-block;
+  padding: .5em;
+  }
+  #cont_rutas {
+  margin: auto;
+  width: fit-content;
+  padding: 10px;
+  background-color: white;
+  color: green;
+  font-weight: 700;
+  font-size: larger;
+  }
+  a {
+  text-decoration: none;
+  }
+</style>
+
+
+<div id="cont_rutas">
 <h1>Lista de rutas de la empresa</h1>
 
 <h2>Hora Actual</h2>
@@ -60,8 +109,45 @@
     </tr>
 </table>
 
-<p><a href="/rutas/sangabriel">San Gabriel</a></p>
+<!-- <p><a href="/rutas/sangabriel">San Gabriel</a></p> -->
 
-<p><a href="/rutas/acosta">Acosta</a></p>
+<!-- <p><a href="/rutas/acosta">Acosta</a></p> -->
+</div>
+
+<script>
+  function showTime(){
+  let date = new Date();
+  let h = date.getHours();
+  let m = date.getMinutes();
+  let s = date.getSeconds();
+  let session = "AM";
+
+  if(h == 0){
+  h = 12;
+  }
+  else if(h > 12){
+  h = h - 12;
+  session = "PM";
+  }
+
+  if((m == 00 || m == 15 || m == 30 || m == 45) && s == 00){
+  location.reload();  // Recargar la página en estos minutos a cualquier hora
+  // y así tener los datos actualizados
+  // Mejor cambiarlo a algo como AJAX para no recargar toda la página
+  }
+
+  h = (h < 10) ? "0" + h : h;
+	   m = (m < 10) ? "0" + m : m;
+		    s = (s < 10) ? "0" + s : s;
+
+			     let time = h + ":" + m + ":" + s + " " + session;
+			     document.getElementById("DigitalCLOCK").innerText = time;
+			     setTimeout(showTime, 1000);
+			     }
+
+			     showTime();
+			     </script>
+
+
 
 {% endblock %}
