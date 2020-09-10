@@ -30,7 +30,7 @@ def contacto(request):
                 return HttpResponse('Configuración de correo inválida.')
             enviado = True
 
-    empresa = get_object_or_404(Agency, agency_id='TSG')
+    empresa = 'TSG' #get_object_or_404(Agency, agency_id='TSG')
     preguntas = Pregunta.objects.all()
     notificacion = "¡Listo! gracias por su mensaje" # FIXME: agregar mensaje de confirmación
     contexto = {

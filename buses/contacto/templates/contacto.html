@@ -1,39 +1,470 @@
-{% extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block page_title %} Contacto {% endblock %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Startus - Responsive Multi-Purpose Template">
+  <link href="/static/template/assets/images/favicon/favicon.png" rel="icon">
+  <title>{{ empresa.name }}</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700%7cRoboto:400,500,700&display=swap">
+  <link rel="stylesheet" href="/static/template/assets/css/libraries.css" />
+  <link rel="stylesheet" href="/static/template/assets/css/style.css" />
+</head>
 
-{% block content %}
+<body>
+  <div class="wrapper">
+    <!-- =========================
+        Header 
+    =========================== -->
+    <header class="header header-transparent">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="/static/template/index.html">
+            <img src="/static/template/assets/images/logo/logo-light.png" class="logo-light" alt="logo">
+            <img src="/static/template/assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav mr-auto ml-auto">
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Home</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="/static/template/index.html" class="nav__item-link">Home Main</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/home-services.html" class="nav__item-link">Home services</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/home-corporate.html" class="nav__item-link">Home corporate</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/home-digital-agency.html" class="nav__item-link">Home Digial Agency</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/home-business.html" class="nav__item-link">Home Business</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/home-agency.html" class="nav__item-link">Home Agency</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/home-shop.html" class="nav__item-link">Home Shop</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/home-/static/template/portfolio-masonry.html" class="nav__item-link">Home Portfolio Masonry</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/home-/static/template/portfolio-grid.html" class="nav__item-link">Home Portfolio grid</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/home-/static/template/portfolio-gallery.html" class="nav__item-link">Home Portfolio gallery</a>
+                  </li><!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link active">Pages</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="/static/template/about-us.html" class="nav__item-link">About Us</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/about-me.html" class="nav__item-link">About me</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/our-team.html" class="nav__item-link">Our Team</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/our-services.html" class="nav__item-link">Our services</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/our-pricing.html" class="nav__item-link">Our pricing</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/contacts.html" class="nav__item-link">Contact Us</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/faqs.html" class="nav__item-link">faqs</a>
+                  </li> <!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">portfolio</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="/static/template/portfolio-grid.html" class="nav__item-link">portfolio Grid</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/portfolio-gallery.html" class="nav__item-link">portfolio Gallery</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/portfolio-masonry.html" class="nav__item-link">portfolio Masonry</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item dropdown-submenu">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Portfolio Details</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav__item">
+                        <a href="/static/template/portfolio-single-small-images.html" class="nav__item-link">small images</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/static/template/portfolio-single-big-images.html" class="nav__item-link">big images</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/static/template/portfolio-single-small-slider.html" class="nav__item-link">small slider</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/static/template/portfolio-single-big-slider.html" class="nav__item-link">big slider</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/static/template/portfolio-single-small-gallery.html" class="nav__item-link">small gallery</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/static/template/portfolio-single-big-gallery.html" class="nav__item-link">big gallery</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/static/template/portfolio-single-small-masonry.html" class="nav__item-link">small masonry</a>
+                      </li><!-- /.nav-item -->
+                      <li class="nav__item">
+                        <a href="/static/template/portfolio-single-big-masonry.html" class="nav__item-link">big masonry</a>
+                      </li><!-- /.nav-item -->
+                    </ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Blog</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="/static/template/blog-grid.html" class="nav__item-link">Blog Grid</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/blog-grid-sidebar.html" class="nav__item-link">Blog Grid Sidebar</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/blog-carousel.html" class="nav__item-link">Blog carousel</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/blog-standard.html" class="nav__item-link">Blog Standard</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/blog-single.html" class="nav__item-link">Blog single</a>
+                  </li><!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item with-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Shop</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="/static/template/shop-3columns.html" class="nav__item-link">Shop 3 Columns</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/shop-4columns.html" class="nav__item-link">Shop 4 Columns</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/shop-single-product.html" class="nav__item-link">Single Product</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="/static/template/shopping-cart.html" class="nav__item-link">shopping cart</a>
+                  </li><!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+            </ul><!-- /.navbar-nav -->
+          </div><!-- /.navbar-collapse -->
+          <div class="navbar-actions">
+            <ul class="navbar__actions-list list-unstyled mb-0 d-flex align-items-center">
+              <li>
+                <a href="#" class="action__btn action__btn-cart">
+                  <i class="icon-cart"></i><span class="cart__counter">3</span>
+                </a>
+              </li>
+              <li><a href="/static/template/contacts.html" class="action__btn btn btn__white action__btn-contact">Contact</a></li>
+              <li><a href="#" class="action__btn action__btn-search"><i class="icon-search"></i></a></li>
+              <li><a href="#" class="action__btn action__btn-humburgerMenu"><i class="icon-menu"></i></a></li>
+            </ul><!-- /.navbar__actions-list -->
 
-<h1>{{ empresa.name }}</h1>
+            <div class="cart-popup">
+              <ul class="list-unstyled">
+                <li class="cart-item">
+                  <div class="cart__item-img"><img src="/static/template/assets/images/shop/thumbs/1.png" alt="thumb"></div>
+                  <div class="cart__item-content">
+                    <h6 class="cart__item-title">Mismo Briefcase</h6>
+                    <div class="cart__item-detail"><span>1 x</span>$ 38.00</div>
+                    <i class="cart__item-delete">&times;</i>
+                  </div><!-- /.cart-item-content -->
+                </li><!-- /.cart-item -->
+                <li class="cart-item">
+                  <div class="cart__item-img"><img src="/static/template/assets/images/shop/thumbs/2.png" alt="thumb"></div>
+                  <div class="cart__item-content">
+                    <h6 class="cart__item-title">Brown Leather</h6>
+                    <div class="cart__item-detail"><span>1 x</span>$ 33.00</div>
+                    <i class="cart__item-delete">&times;</i>
+                  </div><!-- /.cart-item-content -->
+                </li><!-- /.cart-item -->
+              </ul>
+              <div class="cart-subtotal d-flex justify-content-between">
+                <span>Subtotal:</span>
+                <span class="color-theme">$71.00</span>
+              </div><!-- /.cart-subtotal -->
+              <div class="cart-action d-flex justify-content-between">
+                <a href="#" class="btn btn__primary">View Cart</a>
+                <a href="#" class="btn btn__secondary">Checkout</a>
+              </div><!-- /.cart-action -->
+            </div><!-- /.cart-popup -->
+          </div><!-- /.navbar-actions -->
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
 
-<h2>Información de contacto</h2>
+    <!-- ========================
+       page title 
+    =========================== -->
+    <section class="page-title page-title-layout2 text-center bg-overlay">
+      <div class="bg-img"><img src="https://mapio.net/images-p/23793484.jpg" alt="background"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <h1 class="pagetitle__heading">Contacto</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+              </ol>
+            </nav>
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.page-title -->
 
-<ul>
-    <li>Correo: <a href="mailto:{{ empresa.email }}">{{ empresa.email }}</a></li>
-    <li>Teléfono: <a href="tel:{{ empresa.phone }}">{{ empresa.phone }}</a></li>
-    <li>Dirección: Barrio María Auxiliadora, San Ignacio de Acosta (<a href="https://www.waze.com/ul?ll=9.79447088%2C-84.16395520&navigate=yes&zoom=17">Waze</a>)</li>
-</ul>
+    <!-- ========================= 
+      Contact layout 1
+    =========================  -->
+    <section class="contact-layout1 pb-90">
+      <div class="container">
+        <div class="row">
+          <!-- Contact box #1 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="contact-box d-flex align-items-center">
+              <div class="contact-box__icon">
+                <img src="/static/template/assets/images/icons/globe.png" alt="icon">
+              </div>
+              <div class="contact-box__content">
+                <h4 class="contact-box__title">Nuestra dirección</h4>
+                <ul class="contact-box__list list-unstyled mb-0">
+                  <li>San Gabriel calle X, Aserrí, Costa Rica</li>
+                </ul>
+              </div>
+            </div><!-- /.contact-box -->
+          </div><!-- /.col-lg-4 -->
+          <!-- Contact box #2 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="contact-box d-flex align-items-center">
+              <div class="contact-box__icon">
+                <img src="/static/template/assets/images/icons/envelope.png" alt="icon">
+              </div>
+              <div class="contact-box__content">
+                <h4 class="contact-box__title">Información</h4>
+                <ul class="contact-box__list list-unstyled mb-0">
+                  <li>Main Email: Info@startus.com</li>
+                  <li>Phone: 010612471401</li>
+                </ul>
+              </div>
+            </div><!-- /.contact-box -->
+          </div><!-- /.col-lg-4 -->
+          <!-- Contact box #3 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="contact-box d-flex align-items-center">
+              <div class="contact-box__icon">
+                <img src="/static/template/assets/images/icons/support.png" alt="icon">
+              </div>
+              <div class="contact-box__content">
+                <h4 class="contact-box__title">Soporte</h4>
+                <ul class="contact-box__list list-unstyled mb-0">
+                  <li>Main Support: Support@startus.com</li>
+                  <li>Sales: Sales@startus.com</li>
+                </ul>
+              </div>
+            </div><!-- /.contact-box -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Contact layout 1 -->
 
-{% if enviado %}
-{{ notificacion }}
-{% else %}
-<h1>Contáctenos</h1>
-<form method="post">
-  {% csrf_token %}
-  {{ formulario.as_p }}
-  <div class="form-actions">
-    <button type="submit">Enviar</button>
-  </div>
-</form>
-{% endif %}
+    <!-- ========================= 
+        Contact layout 2
+    =========================  -->
+    <section class="contact-layout2 py-0">
+      <div class="contact-panel">
+        <h5 class="contact-panel__title">Comparte con nosotros</h5>
+        <p class="contact-panel__desc">Para nosotros es de gran importancia conocer lo que piensa usted del servicio,
+	  comparte con nosotros cualquier información que pueda hacernos mejorar, le agradecemos.</p>
+        <form>
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="form-group"><input type="text" class="form-control" placeholder="Nombre"></div>
+            </div><!-- /.col-lg-6 -->
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="form-group"><input type="email" class="form-control" placeholder="Correo electrónico"></div>
+            </div><!-- /.col-lg-6 -->
 
-<h2>Preguntas frecuentes</h2>
+	    <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="form-group"><input type="text" class="form-control" placeholder="Asunto"></div>
+            </div><!-- /.col-lg-6 -->
 
-{% for pregunta in preguntas %}
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <div class="form-group mb-30"><textarea class="form-control" placeholder="Su mensaje"></textarea>
+              </div>
+            </div><!-- /.col-lg-12 -->
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <button type="submit" class="btn btn__primary btn__icon">
+                <span>Enviar</span>
+                <i class="fa fa-long-arrow-right"></i>
+              </button>
+            </div><!-- /.col-lg-12 -->
+          </div><!-- /.row -->
+        </form>
+      </div><!-- /.contact-panel -->
 
-<h4>{{ pregunta.pregunta }}</h4>
-<p>{{ pregunta.respuesta }}</p>
+      <div id="map" style="height: 800px;"></div> <!-- FIXME -->
+      <!-- <script src="/static/template/assets/js/google-map.js"></script> -->
+      <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqrqPZOVegy1VIdyIcndxZY9YGoK-x0Yo&callback=initMap" -->
+      <!--   async defer></script> -->
+    </section><!-- /.Contact layout 2 -->
 
-{% endfor %}
+    <!-- ========================
+      Footer
+    ========================== -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 footer__widget footer__widget-about">
+              <h6 class="footer__widget-title">About</h6>
+              <div class="footer__widget-content d-flex">
+                <div class="widget__about-logo">
+                  <img src="/static/template/assets/images/logo/logo-light-mini.png" alt="logo">
+                </div>
+                <div class="widget__about-text">
+                  <p>Tools beyond the one-click install, huge collection of elements, rich options, flexible layouts,
+                    stunning pages and instant results!</p>
+                  <ul class="social__icons list-unstyled">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  </ul><!-- /.social-icons -->
+                </div>
+              </div>
+            </div><!-- /.col-xl-3 -->
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-2  footer__widget footer__widget-nav">
+              <h6 class="footer__widget-title">Company</h6>
+              <div class="footer__widget-content">
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Meet Our Team</a></li>
+                    <li><a href="#">News & Media</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#">Careers</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget-content -->
+            </div><!-- /.col-xl-2 -->
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-2 footer__widget footer__widget-nav">
+              <h6 class="footer__widget-title">Product</h6>
+              <div class="footer__widget-content">
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Enterprise</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Our Pricing</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget-content -->
+            </div><!-- /.col-xl-2 -->
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 footer__widget footer__widget-newsletter">
+              <div class="footer__widget-content">
+                <p>Sign up for design alerts, our latest news, thoughts, and insights from Startus.</p>
+                <form class="widget__newsletter-form">
+                  <div class="form-group mb-0">
+                    <input type="text" class="form-control" placeholder="Your Email Address">
+                    <button type="submit" class="submit-btn">
+                      <i class="fa fa-long-arrow-right"></i>
+                    </button>
+                  </div>
+                </form>
+              </div><!-- /.footer-widget-content -->
+              <p class="text-right fz-13 mt-10 mb-0">You may withdraw your consent at any time!</p>
+            </div><!-- /.col-xl-4 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-top -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+              <div class="footer__copyright">
+                <nav>
+                  <ul class="footer__copyright-links list-unstyled d-flex flex-wrap justify-content-center mb-0">
+                    <li><a href="#">Terms & Conditions </a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Employee login</a></li>
+                  </ul>
+                </nav>
+                <p class="fz-13 mb-0">&copy; Startus, with Love by
+                  <a href="http://themeforest.net/user/7oroof">7oroof.com</a>
+                </p>
+              </div><!-- /.Footer-copyright -->
+            </div><!-- /.col-lg-9 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.Footer-bottom -->
+    </footer><!-- /.Footer -->
+    <button id="scrollTopBtn"><i class="fa fa-long-arrow-up"></i></button>
 
-{% endblock %}
+    <div class="search-popup">
+      <i class="search__popup-close">&times;</i>
+      <form class="search__popup-form">
+        <input type="text" class="search__input" placeholder="Type Words Then Enter">
+        <button class="module__search-btn"><i class="fa fa-search"></i></button>
+      </form>
+    </div><!-- /. search-popup -->
+
+    <div class="hamburger-menu">
+      <i class="hamburger__menu-close">&times;</i>
+      <div class="hamburger__menu-content">
+        <h3 class="hamburger__menu-title">Ready to start your next portfolio?</h3>
+        <a class="hamburger__menu-email mb-50" href="mailto:Startus@7oroof.com">Startus@7oroof.com</a>
+        <ul class="instagram__images list-unstyled d-flex flex-wrap mb-60">
+          <li><img src="/static/template/assets/images/portfolio/grid/1.jpg" alt="instagram"></li>
+          <li><img src="/static/template/assets/images/portfolio/grid/2.jpg" alt="instagram"></li>
+          <li><img src="/static/template/assets/images/portfolio/grid/3.jpg" alt="instagram"></li>
+          <li><img src="/static/template/assets/images/portfolio/grid/4.jpg" alt="instagram"></li>
+          <li><img src="/static/template/assets/images/portfolio/grid/5.jpg" alt="instagram"></li>
+          <li><img src="/static/template/assets/images/portfolio/grid/6.jpg" alt="instagram"></li>
+        </ul><!-- /.instagram-images -->
+        <p class="color-white font-weight-bold">Follow Us</p>
+        <ul class="social__icons list-unstyled mb-0">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+        </ul><!-- /.social-icons -->
+      </div><!-- /.hamburger__menu-content -->
+    </div><!-- /.hamburger-menu -->
+
+  </div><!-- /.wrapper -->
+
+  <script src="/static/template/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="/static/template/assets/js/plugins.js"></script>
+  <script src="/static/template/assets/js/main.js"></script>
+</body>
+
+</html>

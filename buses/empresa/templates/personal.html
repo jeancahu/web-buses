@@ -3,89 +3,91 @@
 {% block page_title %} Personal {% endblock %}
 
 {% block content %}
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
- html {
-     box-sizing: border-box;
- }
-
- *, *:before, *:after {
-     box-sizing: inherit;
- }
-
- .column {
-     float: left;
-     width: 33.3%;
-     margin-bottom: 16px;
-     padding: 0 8px;
- }
-
- @media screen and (max-width: 650px) {
-     .column {
-         width: 100%;
-         display: block;
-     }
- }
-
- .card {
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
- }
-
- .container {
-     padding: 0 16px;
- }
-
- .container::after, .row::after {
-     content: "";
-     clear: both;
-     display: table;
- }
-
- .title {
-     color: grey;
- }
-
- .button {
-     border: none;
-     outline: 0;
-     display: inline-block;
-     padding: 8px;
-     color: white;
-     background-color: #000;
-     text-align: center;
-     cursor: pointer;
-     width: 100%;
- }
-
- .button:hover {
-     background-color: #555;
- }
-</style>
-
-<h1>Lista del personal responsive</h1>
-<p>Una lista cuadriculada de personal de la empresa, con foto, nombre y puesto</p>
-<br>
-
-<div class="row">
-    {% for funcionario in funcionarios %}
-    <div class="column">
-        <a href='/nosotros/funcionario_{{ funcionario.id }}'>
-            <div class="card">
-            <img src="http://161.35.54.122:10066/perfil/imagenes/{{ funcionario.url_site }}"
-                 alt="{{ funcionario.nombre }} - {{ funcionario.cargo }}" style="width:100%">
-            <div class="container">
-                <h2>{{ funcionario.nombre }}</h2>
-                <p class="title">{{ funcionario.cargo }}</p>
-                <p>Lorem ipsum ipsum lorem.</p>
-                <p>ejemplo@tsgcr.com</p>
-                <p><button class="button">Contact</button></p>
-            </div>
-            </div>
-        </a>
-    </div>
-    {% endfor %}
-</div>
                                                                                                                                                                         </div>
+    <!-- ========================
+        Team 1
+	========================== -->
+    <section class="team-layout1 text-center pb-90">
+      <div class="container">
+	<div class="row">
+	  <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+	    <div class="heading mb-60">
+	      <h2 class="heading__title">Nuestro equipo</h2>
+	      <p class="heading__desc">Al servicio de la comunidad de San Gabriel y Acosta</p>
+	    </div><!-- /.heading -->
+	  </div><!-- /.col-lg-6 -->
+	</div><!-- /.row -->
+	<div class="row">
+
+	  {% for funcionario in funcionarios %}
+	  <!-- Member #1 -->
+	  <div class="col-sm-12 col-md-4 col-lg-4">
+	    <div class="member">
+	      <a href='/nosotros/funcionario_{{ funcionario.id }}'>
+	      <div class="member__img">
+
+		<img src="http://161.35.54.122:10066/perfil/imagenes/{{ funcionario.url_site }}"
+                 alt="{{ funcionario.nombre }} - {{ funcionario.cargo }}">
+
+	      </div><!-- /.member-img -->
+	      <div class="member__info">
+		<h5 class="member__name">{{ funcionario.nombre }}</h5>
+		<p class="member__desc">{{ funcionario.cargo }}</p>
+		<p class="member__bio">Descripción Lorem ipsum ipsum lorem</p>
+		<ul class="social__icons justify-content-center list-unstyled mb-0">
+		  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+		</ul><!-- /.social-icons -->
+	      </div><!-- /.member-info -->
+	      </a>
+	    </div><!-- /.member -->
+	  </div><!-- /.col-lg-4 -->
+
+    {% endfor %}
+
+	  
+	  <!-- <\!-- Member #2 -\-> -->
+	  <!-- <div class="col-sm-12 col-md-4 col-lg-4"> -->
+	  <!--   <div class="member"> -->
+	  <!--     <div class="member__img"> -->
+	  <!-- 	<img src="/static/template/assets/images/team/2.jpg" alt="member img"> -->
+	  <!--     </div><\!-- /.member-img -\-> -->
+	  <!--     <div class="member__info"> -->
+	  <!-- 	<h5 class="member__name">Chris M Wensel</h5> -->
+	  <!-- 	<p class="member__desc">Art Director</p> -->
+	  <!-- 	<p class="member__bio">Art wasn't supposed to look nice; it was supposed to make you feel something.</p> -->
+	  <!-- 	<ul class="social__icons justify-content-center list-unstyled mb-0"> -->
+	  <!-- 	  <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+	  <!-- 	  <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->
+	  <!-- 	  <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+	  <!-- 	</ul><\!-- /.social-icons -\-> -->
+	  <!--     </div><\!-- /.member-info -\-> -->
+	  <!--   </div><\!-- /.member -\-> -->
+	  <!-- </div><\!-- /.col-lg-4 -\-> -->
+	  <!-- <\!-- Member #3 -\-> -->
+	  <!-- <div class="col-sm-12 col-md-4 col-lg-4"> -->
+	  <!--   <div class="member"> -->
+	  <!--     <div class="member__img"> -->
+	  <!-- 	<img src="/static/template/assets/images/team/3.jpg" alt="member img"> -->
+	  <!--     </div><\!-- /.member-img -\-> -->
+	  <!--     <div class="member__info"> -->
+	  <!-- 	<h5 class="member__name">Ahmed abdallah</h5> -->
+	  <!-- 	<p class="member__desc">CEO & Founder</p> -->
+	  <!-- 	<p class="member__bio">Every child is an artist. The problem is how to remain an artist once he grows -->
+	  <!-- 	  up.</p> -->
+	  <!-- 	<ul class="social__icons justify-content-center list-unstyled mb-0"> -->
+	  <!-- 	  <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+	  <!-- 	  <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->
+	  <!-- 	  <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+	  <!-- 	</ul><\!-- /.social-icons -\-> -->
+	  <!--     </div><\!-- /.member-info -\-> -->
+	  <!--   </div><\!-- /.member -\-> -->
+	  <!-- </div><\!-- /.col-lg-4 -\-> -->
+
+	</div><!-- /.row -->
+      </div><!-- /.container -->
+          </section><!-- /.team1  -->
+
 
 {% endblock %}
