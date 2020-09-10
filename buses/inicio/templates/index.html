@@ -2,7 +2,71 @@
 
 {% block page_title %} Transportes San Gabriel {% endblock %}
 
-{% block content %}
+{% block banner %}
+<!--
+     ============================
+     Slider
+     ==============================
+--> <section class="slider slider-centerd">
+      <div class="carousel owl-carousel carousel-arrows carousel-dots carousel-dots-light" data-slide="1"
+        data-slide-md="1" data-slide-sm="1" data-autoplay="true" data-nav="true" data-dots="true" data-space="0"
+        data-loop="true" data-speed="3000" data-transition="fade" data-animate-out="fadeOut" data-animate-in="fadeIn">
+        <div class="slide-item bg-overlay">
+          <!-- <div class="bg-img"><img src="/static/template/assets/images/backgrounds/18.jpg" alt="slide img"></div> -->
+	  <div class="bg-img"><img src="https://tsgcr.com/wp-content/uploads/2011/09/Don-Adilio.jpg" alt="slide img"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
+                <div class="slide__content">
+                  <span class="slide__subtitle">We Help, Inspire & Change The World!</span>
+                  <h2 class="slide__title">En busca de un servicio de la mejor calidad!</h2>
+                  <p class="slide__desc">Tools beyond the one-click install, huge collection of elements, rich
+                    customization options, flexible layouts, stunning pages and instant results!</p>
+                  <a href="#" class="btn btn__white mx-3">Get Started</a>
+                  <!-- <a class="video__btn popup-video mx-3" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> -->
+		    <a class="video__btn popup-video mx-3" href="https://www.youtube.com/watch?v=3h-_W6RP8sE">
+                    <div class="video__player">
+                      <span class="video__player-animation"></span>
+                      <span class="video__player-animation video__player-animation-2"></span>
+                      <i class="fa fa-play"></i>
+                    </div>
+                    <span class="video__btn-title color-white ml-20">Play Video</span>
+                  </a>
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-lg-10 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+        <div class="slide-item bg-overlay">
+          <div class="bg-img"><img src="https://tsgcr.com/wp-content/uploads/2011/09/Tista.jpg" alt="slide img"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
+                <div class="slide__content">
+                  <span class="slide__subtitle">We Help, Inspire & Change The World! </span>
+                  <h2 class="slide__title">Trabajando por usted</h2>
+                  <p class="slide__desc">Tools beyond the one-click install, huge collection of elements, rich
+                    customization options, flexible layouts, stunning pages and instant results!</p>
+                  <a href="#" class="btn btn__white mx-3">Get Started</a>
+                  <a class="video__btn popup-video mx-3" href="https://www.youtube.com/watch?v=nrJtHemSPW4">
+                    <div class="video__player">
+                      <span class="video__player-animation"></span>
+                      <span class="video__player-animation video__player-animation-2"></span>
+                      <i class="fa fa-play"></i>
+                    </div>
+                    <span class="video__btn-title color-white ml-20">Play Video</span>
+                  </a>
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-lg-10 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+      </div><!-- /.carousel -->
+    </section><!-- /.slider -->
+
+    {% endblock %}
+
+    {% block content %}
 
 <h1>Página de inicio</h1>
 
