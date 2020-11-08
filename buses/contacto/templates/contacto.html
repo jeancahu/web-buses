@@ -2,10 +2,8 @@
 
 {% block page_title %} Contacto {% endblock %}
 
+{% block emp_title%} Información de contacto {% endblock %}
 {% block content %}
-
-{% block h1 %} Información de contacto {% endblock %}
-
 <ul>
     <li><i class="fas fa-envelope"></i> <strong>Correo</strong>: <a href="mailto:{{ empresa.email }}">{{ empresa.email }}</a></li>
     <li><i class="fas fa-phone"></i> <strong>Teléfono</strong>: <a href="tel:{{ empresa.phone }}">{{ empresa.phone }}</a></li>

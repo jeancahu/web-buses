@@ -2,8 +2,8 @@ from django.db import models
 
 # from django.contrib.gis.geos import LineString
 
-""" 
-Clases a crear 
+"""
+Clases a crear
     - Agencia
     - Parada
     - Ruta
@@ -48,7 +48,7 @@ class Agency(models.Model):
 class Stop(models.Model):
     """A stop or station
     Maps to stops.txt in the GTFS feed.
-    """    
+    """
     stop_id = models.CharField(
         max_length=255, db_index=True,
         help_text="Unique identifier for a stop or station.")
@@ -91,7 +91,7 @@ class Stop(models.Model):
             ('1', 'Some wheelchair boarding'),
             ('2', 'No wheelchair boarding')),
         help_text='Is wheelchair boarding possible?')
-    
+
     def __str__(self):
         return self.name
 
@@ -135,7 +135,7 @@ class Route(models.Model):
     text_color = models.CharField(
         max_length=6, blank=True,
         help_text="Color of route text in hex")
-    
+
     def __str__(self):
         return self.long_name
 
@@ -189,7 +189,7 @@ class StopTime(models.Model):
     arrival_time = models.TimeField(
         default=None, null=True, blank=True,
         help_text="Arrival time. Must be set for end stops of trip.")
-    departure_time = models.TimeField(  
+    departure_time = models.TimeField(
         auto_now=False, auto_now_add=False,
         default=None, null=True, blank=True,
         help_text='Departure time. Must be set for end stops of trip.')
@@ -217,7 +217,7 @@ class StopTime(models.Model):
         help_text='Distance of stop from start of shape')
 
 class Calendar(models.Model):
-    """Calendar with service disponibility for one or more routes 
+    """Calendar with service disponibility for one or more routes
     This implements trips.txt in the GTFS feed
     """
     service_id = models.CharField(
@@ -240,7 +240,7 @@ class Calendar(models.Model):
         choices=(
             ('0', 'The service is available on wednesdays included in this period'),
             ('1', 'The service is not available on wednesdays included in this period')),
-        help_text='Is the service available on wednesdays?')    
+        help_text='Is the service available on wednesdays?')
     thursday = models.CharField(
         max_length=1,
         choices=(
@@ -275,7 +275,7 @@ class Calendar(models.Model):
         help_text='Service start date')
 
 class CalendarDates(models.Model):
-    """Calendar without service disponibility for one or more routes 
+    """Calendar without service disponibility for one or more routes
     This implements trips.txt in the GTFS feed
     """
     service_id = models.ForeignKey('Calendar', on_delete=models.CASCADE)

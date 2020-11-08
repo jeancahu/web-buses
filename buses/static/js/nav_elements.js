@@ -25,9 +25,6 @@ function w3_open() {
     evt.currentTarget.className += " w3-dark-grey";
   }
   
-  var mybtn = document.getElementsByClassName("testbtn")[0];
-  mybtn.click();
-  
   // Accordions
   function myAccFunc(id) {
     var x = document.getElementById(id);

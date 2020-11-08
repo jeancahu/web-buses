@@ -50,7 +50,7 @@
             <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
             <div class="w3-center">
                 <h4>Transportes San Gabriel</h4>
-                <h1 class="w3-xxxlarge w3-animate-bottom">{% block h1 %}{% endblock %}</h1>
+                <h1 class="w3-xxxlarge w3-animate-bottom">{% block emp_title%}{% endblock %}</h1>
             </div>
         </header>
         
@@ -76,11 +76,10 @@
                 <li><i class="fas fa-map-marked"></i> <strong>Dirección</strong>: Barrio María Auxiliadora, San Ignacio de Acosta (<a href="https://www.waze.com/ul?ll=9.79447088%2C-84.16395520&navigate=yes&zoom=17">Waze</a>)</li>
             </ul>
         </footer>
-        
-        <!-- Archivos de JavaScript -->
-        
-        <script src="{% static 'js/hora_actual.js' %}" type="text/javascript"></script>
-        <script src="{% static 'js/map_main.js' %}" type="text/javascript"></script>
-        <script src="{% static 'js/otros.js' %}" type="text/javascript"></script>
+	{% block scripts %}
+	<!-- Aquí el import de los scripts en caso de que haya -->
+	{% endblock %}
+
+	<script src="/static/js/nav_elements.js"></script>
     </body>
 </html>
