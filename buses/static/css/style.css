@@ -1,5 +1,17 @@
+/* Google fonts: */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Content block: */
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .contentblock {
     text-align: center;
     align-content: center;
     padding: 8px;
+}
+
+.leftlist {
+    text-align: left;
 }

@@ -4,7 +4,8 @@
 
 {% block emp_title%} Información de contacto {% endblock %}
 {% block content %}
-<ul>
+
+<ul class="leftlist">
     <li><i class="fas fa-envelope"></i> <strong>Correo</strong>: <a href="mailto:{{ empresa.email }}">{{ empresa.email }}</a></li>
     <li><i class="fas fa-phone"></i> <strong>Teléfono</strong>: <a href="tel:{{ empresa.phone }}">{{ empresa.phone }}</a></li>
     <li><i class="fas fa-map-marked"></i> <strong>Dirección</strong>: Barrio María Auxiliadora, San Ignacio de Acosta (<a href="https://www.waze.com/ul?ll=9.79447088%2C-84.16395520&navigate=yes&zoom=17">Waze</a>)</li>

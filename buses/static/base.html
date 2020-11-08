@@ -7,7 +7,6 @@
 	  <head>
 		    <meta charset="UTF-8">
 		    <meta name="viewport" content="width=device-width, initial-scale=1">
-		    <link href="https://fonts.googleapis.com/css2?family=OpenSans&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{% static 'css/stylish.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/color.css' %}">
@@ -55,14 +54,15 @@
             </div>
         </header>
 
+        <div class="contentblock">
         {% block content %}
 
             <!-- Aquí el contenido de cada página -->
 
         {% endblock %}
+        </div>
 
         <!-- Pie de página -->
-
         <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
             <span class="w3-text w3-theme-light w3-padding">Subir</span>
             <a class="w3-text-black" href="#myHeader"><span class="w3-xlarge">
