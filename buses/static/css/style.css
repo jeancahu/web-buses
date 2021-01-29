@@ -12,6 +12,6 @@
     padding: 8px;
 }
 
-.leftlist {
+.leftlist { /* use on list who are into content block */
     text-align: left;
 }

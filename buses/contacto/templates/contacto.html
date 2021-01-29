@@ -32,10 +32,15 @@
 <button onclick="myAccFunc('{{ forloop.counter0 }}')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">{{ pregunta.pregunta }}</button>
 <div id="{{ forloop.counter0 }}" class="w3-hide">
   <div class="w3-container">
-    <p>{{ pregunta.respuesta }}</p>
+      <p>{{ pregunta.respuesta }}</p>
   </div>
 </div>
 
 {% endfor %}
 
+{% endblock %}
+
+{% block scripts %}
+<!-- Resize the message box, TODO interactive by screen width -->
+<script>  document.getElementById("id_mensaje").cols=30 </script>
 {% endblock %}
